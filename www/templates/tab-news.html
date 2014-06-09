@@ -1,0 +1,12 @@
+<ion-view title="News">
+  <ion-content class="has-header padding">
+    <ion-list>
+        <ion-item ng-repeat="newsObj in news">
+            <h3>{{newsObj.title}}</h3>
+            <p>
+                {{newsObj.text}}
+            </p>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

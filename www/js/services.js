@@ -23,4 +23,32 @@ angular.module('starter.services', [])
       return friends[friendId];
     }
   }
+})
+
+/**
+ * Esempio lista di news 
+ */
+.factory('News', function()
+{
+    var news = [
+        {
+            id      : 100,
+            title   : "Notizia",
+            text    : "Esempio descrizione di una notizia pubblicata dallo staff."
+        },
+        {
+            id      : 101,
+            title   : "Notizia #2",
+            text    : "Esempio descrizione di una notizia pubblicata dallo staff (#2)."
+        }
+    ];
+    
+    return {
+        all: function() {
+            return news;
+        },
+        get: function(newsId) {
+            return _.find(news, function(newsObject){ return newsObject.id == newsId; });
+        }
+    }
 });
